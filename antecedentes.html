@@ -12,6 +12,8 @@
 
   <!-- Bootstrap Core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+            <link href="css/datepicker.css" rel="stylesheet">
+
 
   <!-- Custom CSS -->
   <link href="css/modern-business.css" rel="stylesheet">
@@ -194,12 +196,11 @@
 
       
 
-        <div class="btn-group">
+        <div class="control-group ">
           <div class="controls form-control-inline">
-            <input value="first" style="width:100%;" type="date" />
+          <input value="Fecha de nacimiento"  style="width:100%;" type="text"/ id="datepicker" class="datetimepicker">
             <p class="help-block"></p>
           </div>
-
         </div>
 
  <div class="checkbox checkbox-text">
@@ -250,7 +251,8 @@
 
   <!-- jQuery -->
   <script src="js/jquery.js"></script>
-  <script src="js/progressbar.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="js/bootstrap-datepicker.es.js" charset="UTF-8"></script>
 
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
@@ -261,6 +263,16 @@
       interval: 5000 //changes the speed
     })
   </script>
+    <script>
+    $(".picker").on("change", function() {
+      var date = $(this).val();
+      $(".date").val(date); 
+    })
+    $( document ).ready(function() {
+      $('#datepicker').datepicker();
+      $('#datepicker2').datepicker();
+    });
+</script>
 </body>
 
 </html>
